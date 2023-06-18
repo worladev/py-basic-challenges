@@ -62,9 +62,9 @@ case-insensitive.
 # SOLUTION 1
 def duplicate_count(str):
     for punc in punctuation:
-        word = str.replace(punc, "")
+        str = str.replace(punc, "")
     
-    char_count = Counter(word)
+    char_count = Counter(str)
 
     count = 0
     for value in char_count.values():
@@ -74,8 +74,6 @@ def duplicate_count(str):
 
 print(duplicate_count("function"))
 print(duplicate_count("This is a sentence string."))
-
-
 
 
 
@@ -120,6 +118,105 @@ def get_repeated_characters(str):
     #     num_of_char += 1
 
     # return  char_counts
-    
+
 get_repeated_characters("This is a sentence string.")
 
+
+
+'''NO 5
+Create a function called word_frequency that takes a
+sentence as input and returns a dictionary where the keys
+are the unique words in the sentence, and the values are
+the frequencies of those words.
+'''
+def word_frequency(str):
+
+    for punc in punctuation:
+        str = str.replace(punc, "")
+        
+    str = str.lower().split()
+
+    word_count = {}
+    for word in str:
+        word_count[word] = word_count.get(word, 0) + 1
+    return word_count
+
+print(word_frequency("I am that i am, no one can see through."))
+
+
+'''No 6
+Write a function called binary_search that takes a sorted
+list and a target value as input and returns the index of
+the target value in the list. If the target value is not
+found, return -1.
+'''
+def binary_search(s_list, t_value):
+    for i in s_list:
+        if i == t_value:
+            return f"{i} is at index {s_list.index(i)}"
+
+
+num = [1, 5, 8, 14, 20, 2]
+num = sorted(num)
+print(num)
+print(binary_search(num, 14))
+
+
+
+'''NO 7
+Create a function called is_unique that takes a string
+as input and returns True if all characters in the string
+are unique, and False otherwise.
+'''
+def is_unique(str):
+    str = str.lower()
+    count_char = {}
+    for letter in str:
+        count_char[letter] = count_char.get(letter, 0) + 1
+    
+    print(count_char)
+    
+    for value in count_char.values():
+        if value == 1:
+            continue
+        else:
+            return False 
+
+    return True
+
+print(is_unique("comido"))
+
+
+'''No 8
+Write a function that accepts an id number and return a count
+of each digit in the number
+Eg: 1122334
+1-2
+2-2
+3-1
+4-1
+
+Iteration | Number | digit |
+--------------------------------
+0         | 1234   |  NA
+1         | 1234   | 4
+2         | 123    | 3
+3         | 12     | 2
+4         | 1      | 1
+5         | 
+'''
+def count_number(number):
+    my_list = []
+    for i in range(0, 10):
+        my_list.append(0)
+    
+    while (number > 0):
+        current_digit = number % 10
+        current_count = my_list[current_digit] + 1
+        my_list[current_digit] = current_count
+        number = number//10
+    
+    for i in range(len(my_list)):
+        print(f"{i} - {my_list[i]}")
+
+count_number(1011365)
