@@ -103,3 +103,23 @@ def duplicate_count(str):
 
 print(duplicate_count("functions now"))
 print(duplicate_count("This is a sentence string."))
+
+
+
+#SOLUTION 3 - displays the character and the number of times they appear.
+def get_repeated_characters(str):
+    char_counts = Counter(str)
+    # repeated_chars = [char for char, count in char_counts.items() if count == 2]
+    
+    for key, value in char_counts.items():
+        if value > 1:
+            print(f"{key} appears {value} times")
+
+    # num_of_char = 0
+    # for i in repeated_chars:
+    #     num_of_char += 1
+
+    # return  char_counts
+    
+get_repeated_characters("This is a sentence string.")
+
