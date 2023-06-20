@@ -278,3 +278,29 @@ for key in data:
 
 
 ### RACK YOUR BRAINS ###
+days = {
+    'January':31, 'February':28, 'March':31,'April':30, 'May':31, 'June':30,
+    'July':31, 'August':31, 'September':30, 'October':31, 'November':30, 'December':31
+    }
+
+# (a) Ask the user to enter a month name and use the dictionary to tell
+# them how many days are in the month.
+month_name = input("Enter a month name: ").capitalize()
+days_in_month = days[month_name]
+print(f"There are {days_in_month} days in {month_name}")
+
+# (b) Print out all of the keys in alphabetical order.
+order = [key for key, _ in days.items()]
+order.sort()
+print(order)
+
+# (c) Print out all of the months with 31 days.
+days_with_31 = [key for key, value in days.items() if value == 31]
+print(days_with_31)
+
+# (d) Print out the (key-value) pairs sorted by the number of days in each month
+sort_order = sorted(days.items(), key=lambda x:x[1])
+sort_orders = sorted(days.items(), key=lambda x: x[1], reverse=True)
+print(sort_order)
+for item in sort_order:
+    print(item[0], item[1])
