@@ -87,7 +87,6 @@ def duplicate_count(str):
         char_count[char] = char_count.get(char, 0) + 1
         # print(char_count)
 
-
 #   Counting the characters that appear more than once    
     count = 0
     # for key, value in char_count.items():
@@ -143,6 +142,7 @@ def word_frequency(str):
 
 print(word_frequency("I am that i am, no one can see through."))
 
+#SOLUTION 2
 
 '''No 6
 Write a function called binary_search that takes a sorted
@@ -193,7 +193,7 @@ of each digit in the number
 Eg: 1122334
 1-2
 2-2
-3-1
+3-2
 4-1
 
 Iteration | Number | digit |
@@ -219,4 +219,62 @@ def count_number(number):
     for i in range(len(my_list)):
         print(f"{i} - {my_list[i]}")
 
-count_number(1011365)
+count_number(11223)
+
+
+#SOLUTION 2
+def count_number2(id):
+    digit_counts = {}
+
+    for digit in str(id):
+        if digit in digit_counts:
+            digit_counts[digit] += 1
+        else:
+            digit_counts[digit] = 1
+
+    for digit, count in digit_counts.items():
+        print(f"{digit} - {count}")
+
+count_number2(11223)
+
+
+### RACK YOU BRAIN ###
+data = [
+    {'name':'Kwadwo', 'phone':'555-1414', 'email':'kwadwo@mail.net'},
+    {'name':'Daniel', 'phone':'555-1618', 'email':'daniel@mail.net'}, 
+    {'name':'Akwasi', 'phone':'555-3141', 'email':''}, 
+    {'name':'Andy', 'phone':'555-2718', 'email':'andy@mail.net'}
+]
+# (a) Print all the users whose phone number ends in an 8
+
+for item in data:
+    for value in item.values():
+        if value.endswith("8"):
+            print(item)
+
+
+# (b) Print all the users that don’t have an email address listed
+print("\n")
+for item in data:
+    for value in item.values():
+        if value == '':
+            print(item)
+
+
+#SOLUTION 2
+# (a) Print all the users whose phone number ends in an 8
+for key in data:
+  p = key['phone']
+  if p[-1] == '8':
+    print(f"This user phone number ends with 8: {key}")
+
+
+# (b) Print all the users that don’t have an email address listed
+for key in data:
+  email = key['email']
+  if email == '':
+    print(f"{key} has no EMAIL")
+
+
+
+### RACK YOUR BRAINS ###
