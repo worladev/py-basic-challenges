@@ -257,21 +257,32 @@ def count_number2(id):
 count_number2(1122309008)
 
 
-### RACK YOU BRAIN ###
+'''NO 9
+RACK YOU BRAIN
 data = [
     {'name':'Kwadwo', 'phone':'555-1414', 'email':'kwadwo@mail.net'},
     {'name':'Daniel', 'phone':'555-1618', 'email':'daniel@mail.net'}, 
     {'name':'Akwasi', 'phone':'555-3141', 'email':''}, 
     {'name':'Andy', 'phone':'555-2718', 'email':'andy@mail.net'}
 ]
-# (a) Print all the users whose phone number ends in an 8
+
+(a) Print all the users whose phone number ends in an 8
+(b) Print all the users that don’t have an email address listed
+'''
+data = [
+    {'name':'Kwadwo', 'phone':'555-1414', 'email':'kwadwo@mail.net'},
+    {'name':'Daniel', 'phone':'555-1618', 'email':'daniel@mail.net'}, 
+    {'name':'Akwasi', 'phone':'555-3141', 'email':''}, 
+    {'name':'Andy', 'phone':'555-2718', 'email':'andy@mail.net'}
+]
+# (a)
 for item in data:
     for value in item.values():
         if value.endswith("8"):
             print(item)
 
 
-# (b) Print all the users that don’t have an email address listed
+# (b)
 print("\n")
 for item in data:
     for value in item.values():
@@ -295,30 +306,81 @@ for key in data:
 
 
 
-### RACK YOUR BRAINS ###
+'''NO 10
+RACK YOUR BRAINS
+days = {
+    'January':31, 'February':28, 'March':31,'April':30, 'May':31, 'June':30,
+    'July':31, 'August':31, 'September':30, 'October':31, 'November':30, 'December':31
+    }
+(a) Ask the user to enter a month name and use the dictionary to tell
+them how many days are in the month.
+(b) Print out all of the keys in alphabetical order.
+(c) Print out all of the months with 31 days.
+(d) Print out the (key-value) pairs sorted by the number of days in each month
+
+'''
+
 days = {
     'January':31, 'February':28, 'March':31,'April':30, 'May':31, 'June':30,
     'July':31, 'August':31, 'September':30, 'October':31, 'November':30, 'December':31
     }
 
-# (a) Ask the user to enter a month name and use the dictionary to tell
-# them how many days are in the month.
+# (a)
 month_name = input("Enter a month name: ").capitalize()
 days_in_month = days[month_name]
 print(f"There are {days_in_month} days in {month_name}")
 
-# (b) Print out all of the keys in alphabetical order.
+# (b)
 order = [key for key, _ in days.items()]
 order.sort()
 print(order)
 
-# (c) Print out all of the months with 31 days.
+# (c)
 days_with_31 = [key for key, value in days.items() if value == 31]
 print(days_with_31)
 
-# (d) Print out the (key-value) pairs sorted by the number of days in each month
+# (d)
 sort_order = sorted(days.items(), key=lambda x:x[1])
 sort_orders = sorted(days.items(), key=lambda x: x[1], reverse=True)
 print(sort_order)
 for item in sort_order:
     print(item[0], item[1])
+
+
+
+'''NO 11
+Write a program that repeatedly asks the user to enter product
+names and prices.
+
+Store all of these in a dictionary whose keys are the product
+names and whose values are the prices.
+
+When the user is done entering products and prices, allow them
+to repeatedly enter a product name and print the corresponding price
+or a message if the product is not in the dictionary.
+'''
+
+product = {}
+
+again = True
+while again:
+    response = int(input('''
+    Select  1 to enter new product
+            2 to check product
+            0 to quit: '''))
+    
+    if response == 1:
+        add_product =  input("\n\tEnter product name: ")
+        add_price =  int(input("\n\tEnter price: "))
+        product[add_product] = add_price
+        print(product)
+    
+    elif response == 2:
+        check_product =  input("\n\tEnter product name: ")
+        if check_product in product.keys():
+            print(f"{check_product} = {product[check_product]}")
+        else:
+            print("Item is not available.")
+    else:
+        again == False
+        break
