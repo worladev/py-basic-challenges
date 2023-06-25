@@ -258,7 +258,6 @@ count_number2(1122309008)
 
 
 '''NO 9
-RACK YOU BRAIN
 data = [
     {'name':'Kwadwo', 'phone':'555-1414', 'email':'kwadwo@mail.net'},
     {'name':'Daniel', 'phone':'555-1618', 'email':'daniel@mail.net'}, 
@@ -275,19 +274,26 @@ data = [
     {'name':'Akwasi', 'phone':'555-3141', 'email':''}, 
     {'name':'Andy', 'phone':'555-2718', 'email':'andy@mail.net'}
 ]
-# (a)
-for item in data:
-    for value in item.values():
-        if value.endswith("8"):
-            print(item)
+# (a)i
+# for item in data:
+#     for value in item.values():
+#         if value.endswith("8"):
+#             print(item)
 
+for item in data: #efficiency
+    if item["phone"][-1] == "8":
+        print(item)
 
 # (b)
 print("\n")
-for item in data:
-    for value in item.values():
-        if value == '':
-            print(item)
+# for item in data:
+#     for value in item.values():
+#         if value == '':
+#             print(item)
+
+for item in data: #efficiency
+    if item["email"] == "":
+        print(item)
 
 
 #SOLUTION 2
@@ -307,7 +313,6 @@ for key in data:
 
 
 '''NO 10
-RACK YOUR BRAINS
 days = {
     'January':31, 'February':28, 'March':31,'April':30, 'May':31, 'June':30,
     'July':31, 'August':31, 'September':30, 'October':31, 'November':30, 'December':31
