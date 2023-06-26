@@ -63,14 +63,14 @@ print(post_code[:2].upper())
 Ask the user to type in their name and then tell them how many vowels
 are in their name.
 '''
-# name = input("\nEnter your name: ")
-# vowels = "aeiou"
-# count = 0
-# for letter in vowels:
-#     if letter in name:
-#         count += 1
+name = input("\nEnter your name: ")
+vowels = "aeiou"
+count = 0
+for letter in vowels:
+    if letter in name:
+        count += 1
     
-# print(count)
+print(count)
 
 
 '''No86
@@ -81,14 +81,14 @@ must be in the same case", otherwise, display the message
 "Incorrect".
 '''
 # CHECK AGAIN
-# pass1 = input("Enter a password: ")
-# pass2 = input("Enter a password again: ")
-# if pass1 == pass2:
-#     print("Thank you.")
-# elif pass1.lower() == pass2.lower():
-#     print("They must be the same case")
-# else:
-#     print("Incorrect")
+pass1 = input("Enter a password: ")
+pass2 = input("Enter a password again: ")
+if pass1 == pass2:
+    print("Thank you.")
+elif pass1.lower() == pass2.lower():
+    print("They must be the same case")
+else:
+    print("Incorrect")
 
 
 
@@ -102,11 +102,11 @@ l
 e
 H
 '''
-# word = input("\nEnter a word: ")
-# index = len(word)
-# while index > 0:
-#     letter = word[index - 1]
-#     print(letter)
-#     index -= 1
+word = input("\nEnter a word: ")
+index = len(word)
+while index > 0:
+    letter = word[index - 1]
+    print(letter)
+    index -= 1
 
 
