@@ -46,4 +46,21 @@ print(f"Your weight in pounds is: {round(weight_in_pounds, 2)}lbs")
 
 
 
+'''NO 4
+- Write a program that outputs 100 lines, numbered 1 to 50, each with your name on it.
+The output should look like the output below.
+1 Your name
+2 Your name
+3 Your name
+.
+.
+.
+50 Your name
+'''
+
+num = 1
+while num < 51:
+    print(f"{num} Worlasi.")
+    num += 1
+
 
