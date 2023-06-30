@@ -1,5 +1,5 @@
-from collections import Counter
-from string import punctuation
+# from collections import Counter
+# from string import punctuation
 
 '''
 VARIABLES AND CONDITIONALS
@@ -34,5 +34,16 @@ total_bill = price + tip
 
 print(f"Tip amount: ${tip}")
 print(f"Total bill: ${total_bill}")
+
+
+'''NO 3
+- Write a program that asks the user for a weight in kilograms and converts it to
+pounds. There are 2.2 pounds in a kilogram.
+'''
+weight_in_kg = float(input("\nEnter weight in kilogram: "))
+weight_in_pounds = weight_in_kg * 2.2
+print(f"Your weight in pounds is: {round(weight_in_pounds, 2)}lbs")
+
+
 
 
