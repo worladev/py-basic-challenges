@@ -3,6 +3,7 @@ from string import punctuation
 
 '''
 VARIABLES AND CONDITIONALS
+
 NO 1
 Write a program that asks the user to enter three numbers
 (use three separate input state-ments).
@@ -20,5 +21,18 @@ print(f"Total: {total}")
 print(f"Average: {average}")
 
 
+'''NO 2
+- A lot of cell phones have tip calculators. Write one. Ask the user for the price
+of the meal and the percent tip they want to leave. Then print both the tip amount
+and the total bill with the tip included.
+'''
+price = int(input("\nEnter food price: "))
+percent_tip = int(input("Enter percent of tip you want to leave: "))
+
+tip = (percent_tip/price) * 100
+total_bill = price + tip
+
+print(f"Tip amount: ${tip}")
+print(f"Total bill: ${total_bill}")
 
 
