@@ -78,6 +78,21 @@ else:
     convert = length * 2.54
 
 
+'''NO 6
+- Ask the user for a temperature. Then ask them what units, Celsius or Fahrenheit, the
+temperature is in. Your program should convert the temperature to the other unit.
+The conversions are F = 9/5 * C + 32 and C = 5/9 * (F - 32).
+'''
+temp = int(input("\nEnter temperature: "))
+unit = input("Celcius or Fahrenheit? (c/f): ")
+if unit == "Celcius" or unit == "c" or unit == "C" or unit == "celcius":
+    convert_to_fah = (9/5) * temp + 32
+    print(f"{temp} C =  {round(convert_to_fah, 2)} F")
+elif  unit == "Fahrenheit" or unit == "fahrenheit" or unit == "F" or unit == "f":
+    convert_to_cel = (5/9) * (temp - 32)
+    print(f"{temp} F =  {round(convert_to_cel, 2)} C")
+
+
 
 
 
