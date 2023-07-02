@@ -143,4 +143,29 @@ elif credit >= 84:
     print("You are a senior.")
 
 
+'''NO 9
+- A store charges $12 per item if you buy less than 10 items. If you buy between
+10 and 99 items, the cost is $10 per item. If you buy 100 or more items, the cost
+is $7 per item. Write a program that asks the user how many items they are buying
+and prints the total cost.
+'''
+item = int(input("How many item are you buying?: "))
+if item < 10:
+    cost = item * 12
+    print(f"Total cost is ${cost}")
+elif item >= 10 and item <= 99:
+    cost = item * 10
+    print(f"Total cost is ${cost}")
+elif item >= 100:
+    cost = item * 7
+    print(f"Total cost is ${cost}")
+
+
+
+
+
+
+
+
+
 
