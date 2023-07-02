@@ -64,3 +64,24 @@ while num < 51:
     num += 1
 
 
+
+'''NO 5
+- Write a program that asks the user to enter a length in centimeters .If the user
+enters a negative length, the program should tell the user that the entry is invalid.
+Otherwise, the program should convert the length to inches and print out the result.
+There are 2.54 centimeters in an inch.
+'''
+length = int(input("\nEnter a length in centimeters: "))
+if length < 1:
+    print("Your entry is invalid.")
+else:
+    convert = length * 2.54
+
+
+
+
+
+
+
+
+
