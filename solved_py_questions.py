@@ -162,6 +162,28 @@ elif item >= 100:
 
 
 
+'''NO 9
+FUNCTIONS AND lOOPS
+
+
+- Write a program that asks the user to enter a number and prints out all the divisors
+of that number.
+[Hint: the % operator is used to tell if a number is divisible by something.]
+Factors of a number are whole numbers that divide the given number evenly or exactly,
+leaving no remainder.
+'''
+def get_all_factors(n):
+    factors = []
+    if n < 0:
+        n = -n
+    
+    for i in range(1, n + 1):
+        if n % i == 0:
+            factors.append(i)
+            factors.append(-i)
+    return factors
+    
+print(get_all_factors(4))
 
 
 
