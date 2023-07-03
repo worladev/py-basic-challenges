@@ -1,5 +1,9 @@
-# from collections import Counter
-# from string import punctuation
+
+from collections import Counter
+import random
+from string import punctuation
+
+
 
 '''
 VARIABLES AND CONDITIONALS
@@ -10,6 +14,8 @@ Write a program that asks the user to enter three numbers
 Create variables called total and average that hold the sum and average of the
 three numbers and print out the values of total and average.	
 '''
+
+
 num1 = int(input("\nEnter first number: "))
 num2 = int(input("Enter second number: "))
 num3 = int(input("Enter third number: "))
@@ -186,11 +192,30 @@ print(get_all_factors(4))
 
 
 '''NO 11
-
+- Write a multiplication game program for kids. The program should give the player
+ten randomly generated multiplication questions to do. After each, the program
+should tell them whether they got it right or wrong and what the correct answer is.
 '''
+def multiplication_game():
+    print("\nLet us play a multiplication game.")
+    again = "y"
+    while again == "y":
+        first_num = random.randint(0, 15)
+        second_num = random.randint(0, 15)
+        comp_answer = first_num * second_num
+
+        print("What is the answer for: ")
+        user_answer = int(input(f"{first_num} * {second_num} = : "))
+        if user_answer == comp_answer:
+            print("Correct!")
+        else:
+            print("Incorrect!")
+            print(f"The correct answer is {comp_answer}")
+        
+        again = input("Type 'y' to play again or 'n' to quit")
 
 
-
+multiplication_game()
 
 
 
