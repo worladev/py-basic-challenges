@@ -238,3 +238,16 @@ def fibonacci(n):
 fibonacci(6)
 
 
+'''NO 13
+- Use a for loop to print a triangle like the one below. Allow the user to specify
+how high the triangle should be. 
+* 
+**
+*** 
+**** 
+'''
+tri_height = int(input("\nEnter the height of your triangle: "))
+count = 1
+while count < tri_height + 1:
+    print("*" * count)
+    count += 1
