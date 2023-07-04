@@ -218,4 +218,23 @@ def multiplication_game():
 multiplication_game()
 
 
+'''NO 12
+- The Fibonacci numbers are the sequence below, where the first two numbers are 1,
+and each number thereafter is the sum of the two preceding numbers. Write a
+program that asks the user how many Fibonacci numbers to print and then prints
+that many. eg-> 1,1,2,3,5,8,13,21,34,55,89... 
+'''
+def fibonacci(n):
+    n1 = 0
+    n2 = 1
+    count = 0
+    while count < n:
+        print(n2)
+        new_num = n1 + n2
+        n1 = n2
+        n2 = new_num
+        count += 1
+
+fibonacci(6)
+
 
