@@ -267,3 +267,28 @@ while count > 0:
     print("*" * count)
     count -= 1
 
+
+'''NO 15
+- Ask which direction the user wants to count (up or down). If they select up, then ask
+them for the top number and then count from 1 to that number. If they select down,
+ask them to enter a number below 20 and then count down from 20 to that number.
+If they entered something other than up or down, display the message
+“I don’t understand”. 
+'''
+count_from = input("\nWhere do you want to count from(up/down): ")
+if count_from.lower() == "up":
+    top_num = eval(input("Enter your top number: "))
+    for number in range(1, top_num+1):
+        print(number)
+elif count_from.lower() == "down":
+    down_num = eval(input("Enter a number below 20: "))
+    for number in range(20, down_num-1, -1):
+        print(number)
+else:
+    print("I don't understand")
+
+
+
+
+
+
