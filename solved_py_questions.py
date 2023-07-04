@@ -251,3 +251,19 @@ count = 1
 while count < tri_height + 1:
     print("*" * count)
     count += 1
+
+
+'''NO 14
+- Use a for loop to print a triangle like the one below. Allow the user to specify
+how high the triangle should be.
+**** 
+***
+** 
+* 
+'''
+tri_height2 = int(input("\nEnter the height of your triangle: "))
+count = tri_height2
+while count > 0:
+    print("*" * count)
+    count -= 1
+
