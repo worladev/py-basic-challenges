@@ -304,8 +304,32 @@ else:
 
 
 '''NO 17
-
+-(a) Write a program that uses a while loop (not a for loop) to read through a string
+and print the characters of the string one-by-one on separate lines.
+(b) Modify the program above to print out every second character of the string.
 '''
+string = "Confi"
+count = 0
+while count < len(string):
+    print(string[count])
+    count += 1
+
+#(b)
+
+
+
+
+'''NO 18
+- A good program will make sure that the data its users enter is valid.
+Write a program that asks the user for a weight and converts it from kilograms
+to pounds. Whenever the user enters a weight below 0, the program should tell them
+that their entry is invalid and then ask them again to enter a weight.
+[Hint: Use a while loop, not an if statement].
+'''
+
+
+
+
 
 
 
