@@ -315,7 +315,11 @@ while count < len(string):
     count += 1
 
 #(b)
-
+string2 = "Worlasi"
+count2 = 0
+while count2 < len(string):
+    print(string2[count2])
+    count2 += 2
 
 
 
