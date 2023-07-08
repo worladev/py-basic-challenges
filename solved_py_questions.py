@@ -169,8 +169,7 @@ elif item >= 100:
 
 
 '''NO 10
-FUNCTIONS AND lOOPS
-
+lOOPS
 
 - Write a program that asks the user to enter a number and prints out all the divisors
 of that number.
@@ -370,6 +369,48 @@ for i in range(len(str)):
     else:
         print(f"{letter} not in {str}.")
         break
+
+
+'''NO 20
+Write a program that allows the user to enter any number of test scores.
+The user indicates they are done by entering in a negative number. Print how many
+of the scores are A's (90 or above). Also print out the average.
+'''
+
+test_score = []
+again = True
+
+while again:
+    print("\nEnter a negative number when done.")
+    user_input = int(input("Enter test score: "))
+    if user_input >= 0:
+        test_score.append(user_input)
+    else:
+        again = False
+
+
+count = 0
+average = 0
+sum = 0
+for i in test_score:
+    sum += i
+    if i >= 90:
+        count += 1
+
+
+average = sum/len(test_score)
+print(f"{count} test scored 'A'.\nAverage is: {average}")
+
+
+'''NO 21
+FUNCTIONS
+
+
+'''
+
+
+
+
 
 
 
