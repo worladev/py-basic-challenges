@@ -405,8 +405,22 @@ print(f"{count} test scored 'A'.\nAverage is: {average}")
 '''NO 21
 FUNCTIONS
 
-
+Write a function called change_case that given a string, returns a string with each
+upper case letter replaced by a lower case letter and vice-versa.
 '''
+
+def change_case(str):
+    change = list()
+    for i in str:
+        if i == i.lower():
+            change.append(i.upper())
+        if i == i.upper():
+            change.append(i.lower())
+        str = "".join(change)
+    return str
+
+print(change_case("conFiDeNcE"))
+
 
 
 
