@@ -422,7 +422,22 @@ def change_case(str):
 print(change_case("conFiDeNcE"))
 
 
+'''NO 22
+Write a function called is_sorted that is given a list and returns True if the list
+is sorted and False otherwise. 
+'''
+def is_sorted(list):
+    sort_list = sorted(list)
+    if list == sort_list:
+        return True
+    else:
+        return False
 
+names = ["Mary", "James", "Mike", "Eva", "Sandra", "Angela"]
+num = [5, 11, 4, 105, 25, 87, 2]
+
+print(is_sorted(names))
+print(is_sorted(num))
 
 
 
