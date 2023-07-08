@@ -362,6 +362,16 @@ while check:
         print(f"{letter} not in {str}.")
         break
 
+# Using for/break loop
+for i in range(len(str)):
+    if letter in str:
+        print(str.index(letter))
+        break
+    else:
+        print(f"{letter} not in {str}.")
+        break
+
+
 
 
 
