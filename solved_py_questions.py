@@ -440,7 +440,22 @@ print(is_sorted(names))
 print(is_sorted(num))
 
 
-
+'''NO 23
+Write a function called one_away that takes two strings and returns True
+if the strings are of the same length and differ in exactly one letter,
+like bike/hike or water/wafer.
+'''
+def one_way(str1, str2):
+    if len(str1) == len(str2):
+        for i in range(len(str1)):
+            if str1[i] != str2[i]:
+                return True
+            else:
+                return False
+    else:
+        return f"Words are not the same length."
+    
+print(one_way("bike", "hike"))
 
 
 
