@@ -273,7 +273,7 @@ while count > 0:
 them for the top number and then count from 1 to that number. If they select down,
 ask them to enter a number below 20 and then count down from 20 to that number.
 If they entered something other than up or down, display the message
-“I don’t understand”. 
+“I don't understand”. 
 '''
 count_from = input("\nWhere do you want to count from(up/down): ")
 if count_from.lower() == "up":
@@ -322,7 +322,6 @@ while count2 < len(string):
     count2 += 2
 
 
-
 '''NO 18
 - A good program will make sure that the data its users enter is valid.
 Write a program that asks the user for a weight and converts it from kilograms
@@ -330,8 +329,20 @@ to pounds. Whenever the user enters a weight below 0, the program should tell th
 that their entry is invalid and then ask them again to enter a weight.
 [Hint: Use a while loop, not an if statement].
 '''
+count = 0
+while count < 1:
+    weight_in_kg2 = float(input("\nEnter weight in kilogram: "))
+    if weight_in_kg2 > 0:
+        weight_in_pounds2 = weight_in_kg2 * 2.2
+        print(f"Your weight in pounds is: {round(weight_in_pounds2, 2)}lbs")
+        count += 1
+    else:
+        print("Wrong entry.")
 
 
+'''NO 19
+
+'''
 
 
 
