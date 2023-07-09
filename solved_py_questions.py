@@ -458,6 +458,23 @@ def one_way(str1, str2):
 print(one_way("bike", "hike"))
 
 
+'''NO 24
+- Write a function called first_diff that is given two strings and returns the first
+location in which the strings differ.
+If the strings are identical, it should return -1.
+'''
+def first_diff(str1, str2):
+    _min = min(len(str1), len(str2))
+    for i in range(_min):
+        if str1[i] != str2[i]:
+            return i
+    
+    if str1 == str2:
+        return -1
+
+print(first_diff("hoke", "hike"))
+
+
 
 
 
