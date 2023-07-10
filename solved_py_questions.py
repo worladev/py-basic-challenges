@@ -521,3 +521,30 @@ def matches(str1, str2):
 print(matches("python", "path"))
 
 
+
+'''NO 27
+Implement a function called duplicate_count that takes a
+string as input and returns the count of characters that
+appear more than once in the string. The count should be
+case-insensitive.
+'''
+from collections import Counter
+from string import punctuation
+
+def duplicate_count(str):
+    for punc in punctuation:
+        str = str.replace(punc, "")
+    
+    char_count = Counter(str)
+
+    count = 0
+    for key, value in char_count.items():
+        if value > 1:
+            count = value
+            print(f"{key} appear {count} times")
+    return duplicate_count
+
+
+duplicate_count("functionally")
+duplicate_count("This is a sentence string.")
+
