@@ -475,8 +475,31 @@ def first_diff(str1, str2):
 print(first_diff("hoke", "hike"))
 
 
+'''NO 25
+- The digital root of a number n is obtained as follows: Add up the digits n to get a
+new number. Add up the digits of that to get another new number. Keep doing this until
+you get a number that has only one digit. That number is the digital root.For example,
+if n = 45893, we add up the digits to get 4+5+8+9+3 = 29. We then add up the digits of
+29 to get 2+9=11. We then add up the digits of 11 to get 1+1=2. Since 2 has only one
+digit, 2 is our digital root. Write a function that returns the digital root of an
+integer n.
+'''
+def digital_root(n):
+    result = 0
+    digital_r = 0
+
+    for digit in str(n):
+        result += int(digit)
+    
+    if result in range(1, 10):
+        digital_r = result
+    else:
+         digital_r = digital_root(result)
+
+    return digital_r
 
 
+print(digital_root(45893))
 
 
 
