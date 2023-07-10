@@ -502,4 +502,22 @@ def digital_root(n):
 print(digital_root(45893))
 
 
+'''NO 26
+Write a function called matches that takes two strings as arguments and returns how many matches there
+are between the strings. 
+A match is where the two strings have the same character at the same index. For instance, 
+'python' and 'path' match in the first, third, and fourth characters, so the function
+should return 3
+'''
+
+def matches(str1, str2):
+    _match = ""
+    for i in range(len(str1)):
+        for j in range(len(str2)):
+            if str1[i] == str2[j]:
+                _match = _match + str1[i]
+    return _match, len(_match)
+
+print(matches("python", "path"))
+
 
