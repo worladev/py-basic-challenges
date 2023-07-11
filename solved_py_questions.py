@@ -590,4 +590,25 @@ get_repeated_characters("This is a string.")
 
 
 
-'''NO28'''
+'''NO 28
+Create a function called word_frequency that takes a
+sentence as input and returns a dictionary where the keys
+are the unique words in the sentence, and the values are
+the frequencies of those words.
+'''
+def word_frequency(str):
+
+    for punc in punctuation:
+        str = str.replace(punc, "")
+        
+    str = str.lower().split()
+
+    word_count = {}
+    for word in str:
+        word_count[word] = word_count.get(word, 0) + 1
+    return word_count
+
+print(word_frequency("I am that i am, no one can see through."))
+
+
+
