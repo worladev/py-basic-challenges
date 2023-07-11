@@ -553,7 +553,25 @@ def duplicate_count(str):
 duplicate_count("functionally")
 duplicate_count("This is a sentence string.")
 
-# SOLUTION 2
 
+# # SOLUTION 2
+def duplicate_count(str):
+    str = str.lower()  # Convert string to lowercase
+    char_count = {}  # Dictionary to store character counts
+
+    # Count the occurrences of each character in the string
+    # modified
+    for char in str:
+        char_count[char] = char_count.get(char, 0) + 1
+
+    # Counting the characters that appear more than once    
+    count = 0
+    for key, value in char_count.items():
+        if value > 1:
+            count = value
+            print(f"{key} appear {count} times")
+    return duplicate_count
+
+duplicate_count("functionally now is not safe.")
 
 
