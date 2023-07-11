@@ -575,3 +575,19 @@ def duplicate_count(str):
 duplicate_count("functionally now is not safe.")
 
 
+# SOLUTION 3 - displays the character and the number of times they appear.
+def get_repeated_characters(str):
+    str = str.lower()
+    char_counts = Counter(str)
+    
+    for key, value in char_counts.items():
+        if value > 1:
+            print(f"{key} appears {value} times")
+    
+    return get_repeated_characters
+
+get_repeated_characters("This is a string.")
+
+
+
+'''NO28'''
