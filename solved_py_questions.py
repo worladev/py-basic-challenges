@@ -596,6 +596,7 @@ sentence as input and returns a dictionary where the keys
 are the unique words in the sentence, and the values are
 the frequencies of those words.
 '''
+# SOLUTION 1
 def word_frequency(str):
 
     for punc in punctuation:
@@ -611,4 +612,21 @@ def word_frequency(str):
 print(word_frequency("I am that i am, no one can see through."))
 
 
+# SOLUTION 2
+def word_frequency(sentence):
+    for punc in punctuation:
+        sentence = sentence.replace(punc, "")
+    sentence.replace(" ", "")
+    sentence = sentence.split()
+    
+    word_counts = {}
+    for word in sentence:
+        if word in word_counts:
+            word_counts[word] += 1
+        else:
+            word_counts[word] = 1        
 
+    return word_counts
+
+sen = "I will go, then come, then leave, then sleep, then leave."
+print(word_frequency(sen))
