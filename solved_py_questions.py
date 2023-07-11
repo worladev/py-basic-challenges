@@ -531,10 +531,16 @@ case-insensitive.
 from collections import Counter
 from string import punctuation
 
+
+# SOLUTION 1
 def duplicate_count(str):
+    # remove all punctuations
     for punc in punctuation:
         str = str.replace(punc, "")
     
+    str = str.lower() # convert string to lower case
+    
+    # Count the occurrences of each character in the string
     char_count = Counter(str)
 
     count = 0
@@ -544,7 +550,10 @@ def duplicate_count(str):
             print(f"{key} appear {count} times")
     return duplicate_count
 
-
 duplicate_count("functionally")
 duplicate_count("This is a sentence string.")
+
+# SOLUTION 2
+
+
 
