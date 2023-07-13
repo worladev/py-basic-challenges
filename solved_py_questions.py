@@ -630,3 +630,25 @@ def word_frequency(sentence):
 
 sen = "I will go, then come, then leave, then sleep, then leave."
 print(word_frequency(sen))
+
+
+'''No 29
+Write a function called binary_search that takes a sorted
+list and a target value as input and returns the index of
+the target value in the list. If the target value is not
+found, return -1.
+'''
+def binary_search(s_list, t_value):
+    for i in s_list:
+        if i == t_value:
+            return f"{i} is at index {s_list.index(i)}"
+        else:
+            return -1
+
+
+num = [1, 5, 14, 17, 20, 2]
+num = sorted(num)
+print(num)
+print(binary_search(num, 15))
+
+
