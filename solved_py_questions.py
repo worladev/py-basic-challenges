@@ -652,3 +652,28 @@ print(num)
 print(binary_search(num, 15))
 
 
+
+'''NO 30
+Create a function called is_unique that takes a string
+as input and returns True if all characters in the string
+are unique, and False otherwise.
+'''
+def is_unique(str):
+    str = str.lower()
+    count_char = {}
+    for letter in str:
+        count_char[letter] = count_char.get(letter, 0) + 1
+    
+    # print(count_char)
+    for value in count_char.values():
+        if value == 1:
+            continue
+        else:
+            return False 
+
+    return True
+
+print(is_unique("comidi"))
+
+
+
