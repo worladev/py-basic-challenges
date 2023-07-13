@@ -694,6 +694,8 @@ Iteration | Number | digit |
 4         | 1      | 1
 5         | 
 '''
+
+# SOLUTION 1
 def count_number(number):
     my_list = []
     for i in range(0, 10):
@@ -710,5 +712,18 @@ def count_number(number):
 
 count_number(11223)
 
+# SOLUTION 2
+def count_number2(id):
+    digit_counts = {}
 
+    for digit in str(id):
+        if digit in digit_counts:
+            digit_counts[digit] += 1
+        else:
+            digit_counts[digit] = 1
+
+    for digit, count in digit_counts.items():
+        print(f"{digit} - {count}")
+
+count_number2(11300922082)
 
