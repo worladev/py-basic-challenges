@@ -676,4 +676,39 @@ def is_unique(str):
 print(is_unique("comidi"))
 
 
+'''No 31
+Write a function that accepts an id number and return a count
+of each digit in the number
+Eg: 1122334
+1-2
+2-2
+3-2
+4-1
+
+Iteration | Number | digit |
+--------------------------------
+0         | 1234   |  NA
+1         | 1234   | 4
+2         | 123    | 3
+3         | 12     | 2
+4         | 1      | 1
+5         | 
+'''
+def count_number(number):
+    my_list = []
+    for i in range(0, 10):
+        my_list.append(0)
+    
+    while (number > 0):
+        current_digit = number % 10
+        current_count = my_list[current_digit] + 1
+        my_list[current_digit] = current_count
+        number = number//10
+    
+    for i in range(len(my_list)):
+        print(f"{i} - {my_list[i]}")
+
+count_number(11223)
+
+
 
