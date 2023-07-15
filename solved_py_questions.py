@@ -757,3 +757,17 @@ for item in data: # efficiency
         print(item)
 
 
+# (b) i
+print("\n")
+for item in data:
+    for value in item.values():
+        if value == '':
+            print(item)
+
+    # ii
+for item in data: #efficiency
+    if item["email"] == "":
+        print(item)
+
+
+
