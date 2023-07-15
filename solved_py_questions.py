@@ -770,4 +770,18 @@ for item in data: #efficiency
         print(item)
 
 
+# #SOLUTION 2
+# (a) Print all the users whose phone number ends in an 8
+for key in data:
+  p = key['phone']
+  if p[-1] == '8':
+    print(f"Users whose phone number ends with 8: {key}")
+
+
+# (b) Print all the users that don’t have an email address listed
+for key in data:
+  email = key['email']
+  if email == '':
+    print(f"{key} has no email")
+
 
