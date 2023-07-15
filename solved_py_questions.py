@@ -727,3 +727,33 @@ def count_number2(id):
 
 count_number2(11300922082)
 
+
+'''NO 32
+data = [
+    {'name':'Kwadwo', 'phone':'555-1414', 'email':'kwadwo@mail.net'},
+    {'name':'Daniel', 'phone':'555-1618', 'email':'daniel@mail.net'}, 
+    {'name':'Akwasi', 'phone':'555-3141', 'email':''}, 
+    {'name':'Andy', 'phone':'555-2718', 'email':'andy@mail.net'}
+]
+
+(a) Print all the users whose phone number ends in an 8
+(b) Print all the users that don't have an email address listed
+'''
+data = [
+    {'name':'Kwadwo', 'phone':'555-1414', 'email':'kwadwo@mail.net'},
+    {'name':'Daniel', 'phone':'555-1618', 'email':'daniel@mail.net'}, 
+    {'name':'Akwasi', 'phone':'555-3141', 'email':''}, 
+    {'name':'Andy', 'phone':'555-2718', 'email':'andy@mail.net'}
+]
+# (a) i
+for item in data:
+    for value in item.values():
+        if value.endswith("8"):
+            print(item)
+
+    # ii
+for item in data: # efficiency
+    if item["phone"][-1] == "8":
+        print(item)
+
+
