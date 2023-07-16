@@ -815,4 +815,14 @@ order = [key for key, _ in days.items()]
 order.sort()
 print(order)
 
+# (c) Print out all of the months with 31 days.
+days_with_31 = [key for key, value in days.items() if value == 31]
+print(days_with_31)
+
+# (d) Print out the (key-value) pairs sorted by the number of days in each month
+sort_order = sorted(days.items(), key=lambda x:x[1])
+sort_orders = sorted(days.items(), key=lambda x: x[1], reverse=True)
+print(sort_order)
+for item in sort_order:
+    print(item[0], item[1])
 
