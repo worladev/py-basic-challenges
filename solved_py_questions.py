@@ -864,3 +864,28 @@ while again:
         again == False
         break
 
+
+
+'''NO 35
+- Write a function called closest that takes a list of numbers L and a number n and
+returns the largest element in L that is not larger than n. For instance,
+if L=[1,6,3,9,11] and n=8, then the function should return 6, because 6 is the
+closest thing in L to 8 that is not larger than 8. Don't worry about if all of the
+things in L are smaller than n. 
+'''
+
+# My Solution 1
+num_list = [3, 6, 8, 1, 17, 9]
+
+def closest(list, n):
+    sort_list = sorted(list)
+    n_idx = sort_list.index(n)
+    small_val_idx = n_idx - 1
+    if small_val_idx < 0:
+        return f"No number is smaller than {n} in the list."
+    else:
+        return sort_list[small_val_idx]
+
+print(closest(num_list, 1))
+
+
