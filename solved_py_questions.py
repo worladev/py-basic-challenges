@@ -826,3 +826,41 @@ print(sort_order)
 for item in sort_order:
     print(item[0], item[1])
 
+
+
+'''NO 34
+Write a program that repeatedly asks the user to enter product
+names and prices.
+
+Store all of these in a dictionary whose keys are the product
+names and whose values are the prices.
+
+When the user is done entering products and prices, allow them
+to repeatedly enter a product name and print the corresponding price
+or a message if the product is not in the dictionary.
+'''
+
+product = {}
+again = True
+while again:
+    response = int(input('''
+    Select  1 to enter new product
+            2 to check product
+            0 to quit: '''))
+    
+    if response == 1:
+        add_product =  input("\n\tEnter product name: ")
+        add_price =  int(input("\n\tEnter price: "))
+        product[add_product] = add_price
+        print(product)
+    
+    elif response == 2:
+        check_product =  input("\n\tEnter product name: ")
+        if check_product in product.keys():
+            print(f"{check_product} = {product[check_product]}")
+        else:
+            print("Item is not available.")
+    else:
+        again == False
+        break
+
