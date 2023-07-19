@@ -901,3 +901,6 @@ def calc_average(scores):
     
     average = total_score / number_of_scores
     return round(average,2)
+
+score_list = [56, 75, 92, 88, 56]
+print(calc_average(score_list))
