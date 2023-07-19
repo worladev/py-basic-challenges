@@ -906,7 +906,7 @@ score_list = [56, 75, 92, 88, 56]
 print(calc_average(score_list))
 
 
-'''
+'''NO 37
 LISTS
 
 - Write a program that asks the user to enter a list of integers. Do the following:
@@ -932,5 +932,17 @@ print(f"You have {len(list_of_int)} integers in your list.")
 
 # (b) Print the last item in the list.
 print(f"The last item in your list is {list_of_int[-1]}")
+
+# (c) Print the list in reverse order.
+len = len(list_of_int)
+while len > 0:
+    print(list_of_int[len - 1])
+    len -= 1
+
+#(d) Print Yes if the list contains a 5 and No otherwise.
+if 5 in list_of_int:
+    print("Yes")
+else:
+    print("No")
 
 
