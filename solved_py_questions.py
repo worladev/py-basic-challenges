@@ -904,3 +904,33 @@ def calc_average(scores):
 
 score_list = [56, 75, 92, 88, 56]
 print(calc_average(score_list))
+
+
+'''
+LISTS
+
+- Write a program that asks the user to enter a list of integers. Do the following:
+(a) Print the total number of items in the list.
+(b) Print the last item in the list.
+(c) Print the list in reverse order.
+(d) Print Yes if the list contains a 5 and No otherwise.
+(e) Print the number of fives in the list.
+(f) Remove the first and last items from the list, sort the remaining items, and print the result.
+(g) Print how many integers in the list are less than 5.
+'''
+list_of_int = list()
+print("\nYou are creating a list of integers.")
+number_of_items = int(input("How many integers do you want in your list?: "))
+count = 0
+while count < number_of_items:
+    num = int(input("Enter number: "))
+    list_of_int.append(num)
+    count += 1
+
+# (a) Print the total number of items in the list.
+print(f"You have {len(list_of_int)} integers in your list.")
+
+# (b) Print the last item in the list.
+print(f"The last item in your list is {list_of_int[-1]}")
+
+
