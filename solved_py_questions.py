@@ -889,3 +889,15 @@ def closest(list, n):
 print(closest(num_list, 1))
 
 
+'''NO 36
+A function that calculates the average score for a list of student scores. 
+'''
+def calc_average(scores):
+    total_score = 0
+    number_of_scores = len(scores)
+
+    for score in scores:
+        total_score += score
+    
+    average = total_score / number_of_scores
+    return round(average,2)
