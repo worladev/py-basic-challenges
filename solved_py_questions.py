@@ -945,4 +945,19 @@ if 5 in list_of_int:
 else:
     print("No")
 
+# (e) Print the number of fives in the list.
+count5 = 0
+for item in list_of_int:
+    if item == 5:
+        count5 += 1
+
+print(f"You have {count5} fives in your list.")
+
+# (f) Remove the first and last items from the list, sort the remaining items,
+    # and print the result.
+list_of_int.remove(list_of_int[0])
+list_of_int.remove(list_of_int[-1])
+sort_list = sorted(list_of_int)
+print(f"This is your sorted list: {sort_list}")
+
 
