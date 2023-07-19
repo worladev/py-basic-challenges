@@ -960,4 +960,10 @@ list_of_int.remove(list_of_int[-1])
 sort_list = sorted(list_of_int)
 print(f"This is your sorted list: {sort_list}")
 
+# (g) Print how many integers in the list are less than 5.
+countlessthan5 = 0
+for item in list_of_int:
+    if item < 5:
+        countlessthan5 += 1
 
+print(f"There are {countlessthan5} integers less than 5 in your list.")
