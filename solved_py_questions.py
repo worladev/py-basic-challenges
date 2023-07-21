@@ -967,3 +967,37 @@ for item in list_of_int:
         countlessthan5 += 1
 
 print(f"There are {countlessthan5} integers less than 5 in your list.")
+
+
+'''NO 38
+- Write a program that generates a list of 20 random numbers between 1 and 100.
+(a) Print the list.
+(b) Print the average of the elements in the list.
+(c) Print the largest and smallest values in the list.
+(d) Print the second largest and second smallest entries in the list
+(e) Print how many even numbers are in the list.
+- Start with the list [8,9,10]. Do the following:
+(a) Set the second entry (index 1) to 17 
+(b) Add4,5,and 6 to the end of the list 
+(c) Remove the first entry from the list
+(d) Sort the list
+(e) Double the list
+(f) Insert 25 at index 3
+The final list should equal [4,5,6,25,10,17,4,5,6,10,17]
+'''
+rand_list = list()
+count = 20
+while count != 0:
+    rand_num = random.randint(1, 100)
+    if rand_num not in rand_list:
+        rand_list.append(rand_num)
+        count -= 1
+    else:
+        continue
+
+
+# (a) Print the list.
+print(rand_list)
+
+
+
