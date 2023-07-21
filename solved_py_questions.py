@@ -999,5 +999,7 @@ while count != 0:
 # (a) Print the list.
 print(rand_list)
 
-
+# (b) Print the average of the elements in the list.
+avg = sum(rand_list)/len(rand_list)
+print(f"Average is: {avg}")
 
