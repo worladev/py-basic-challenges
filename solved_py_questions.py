@@ -1003,3 +1003,8 @@ print(rand_list)
 avg = sum(rand_list)/len(rand_list)
 print(f"Average is: {avg}")
 
+# (c) Print the largest and smallest values in the list.
+print(f"\nLargest value is: {max(rand_list)}")
+print(f"Smallest value is: {min(rand_list)}")
+
+
