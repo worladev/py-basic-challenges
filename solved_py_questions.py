@@ -1039,3 +1039,15 @@ li.append(5)
 li.append(6)
 print("\n", li)
 
+# (c) Remove the first entry from the list
+del li[0]
+print("\n", li)
+
+# (d) Sort the list
+sort_li = sorted(li)
+print("\n", sort_li)
+
+# (e) Double the list
+double_li = sort_li + sort_li
+print("\n", double_li)
+
