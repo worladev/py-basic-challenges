@@ -976,14 +976,6 @@ print(f"There are {countlessthan5} integers less than 5 in your list.")
 (c) Print the largest and smallest values in the list.
 (d) Print the second largest and second smallest entries in the list
 (e) Print how many even numbers are in the list.
-- Start with the list [8,9,10]. Do the following:
-(a) Set the second entry (index 1) to 17 
-(b) Add4,5,and 6 to the end of the list 
-(c) Remove the first entry from the list
-(d) Sort the list
-(e) Double the list
-(f) Insert 25 at index 3
-The final list should equal [4,5,6,25,10,17,4,5,6,10,17]
 '''
 rand_list = list()
 count = 20
@@ -995,16 +987,36 @@ while count != 0:
     else:
         continue
 
+sort_rand_list = sorted(rand_list)
 
 # (a) Print the list.
-print(rand_list)
+print(sort_rand_list)
 
 # (b) Print the average of the elements in the list.
-avg = sum(rand_list)/len(rand_list)
+avg = sum(sort_rand_list)/len(sort_rand_list)
 print(f"Average is: {avg}")
 
 # (c) Print the largest and smallest values in the list.
-print(f"\nLargest value is: {max(rand_list)}")
-print(f"Smallest value is: {min(rand_list)}")
+print(f"\nLargest value is: {max(sort_rand_list)}")
+print(f"Smallest value is: {min(sort_rand_list)}")
+
+# (d) Print the second largest and second smallest entries in the list
+sec_lg = sort_rand_list.index(max(sort_rand_list)) - 1
+print(f"\nSecond Largest value is: {sort_rand_list[sec_lg]}")
+
+sec_sm = sort_rand_list.index(min(sort_rand_list)) + 1
+print(f"Second Smallest value is: {sort_rand_list[sec_sm]}")
+
+# (e) Print how many even numbers are in the list.
+count = 0
+for num in sort_rand_list:
+    if num % 2 == 0:
+        count += 1
+
+print(f"\nThere are {count} even numbers in the list.")
 
 
+
+'''NO 39
+
+'''
