@@ -1051,3 +1051,13 @@ print("\n", sort_li)
 double_li = sort_li + sort_li
 print("\n", double_li)
 
+# (f) Insert 25 at index 3
+double_li.insert(3, 25)
+
+# The final list should equal [4,5,6,25,10,17,4,5,6,10,17]
+print("\n", double_li)
+
+
+'''NO 40
+
+'''
