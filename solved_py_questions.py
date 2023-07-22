@@ -1018,5 +1018,24 @@ print(f"\nThere are {count} even numbers in the list.")
 
 
 '''NO 39
-
+- Start with the list [8,9,10]. Do the following:
+(a) Set the second entry (index 1) to 17 
+(b) Add4,5,and 6 to the end of the list 
+(c) Remove the first entry from the list
+(d) Sort the list
+(e) Double the list
+(f) Insert 25 at index 3
+The final list should equal [4,5,6,25,10,17,4,5,6,10,17]
 '''
+li = [8, 9, 10]
+
+# (a) Set the second entry (index 1) to 17
+li[1] = 17
+print("\n", li)
+
+# (b) Add 4,5,and 6 to the end of the list
+li.append(4)
+li.append(5)
+li.append(6)
+print("\n", li)
+
