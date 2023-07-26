@@ -1099,3 +1099,21 @@ for c in rand_bi:
     maximum = max(count, maximum)
 
 print(maximum)
+
+
+'''
+NO 42
+- Write a program that removes any repeated items from a list so that each item appears at
+most once. For instance, the list [1,1,2,3,4,3,0,0] would become [1,2,3,4,0].
+'''
+def remove_duplicate(list_args):
+    new_list = list()
+    for item in list_args:
+        if item not in new_list:
+            new_list.append(item)
+    
+    return new_list
+
+test_list = [1,1,2,3,4,3,0,0]
+print(remove_duplicate(test_list))
+
