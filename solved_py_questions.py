@@ -1078,3 +1078,26 @@ l2 = [1,5,9]
 print(add_list(l1, l2))
 
 
+'''NO 41
+- Write a program that generates 100 random integers that are either 0 or 1. Then find the
+longest run of zeros, the largest number of zeros in a row. For instance, the longest run
+of zeros in [1,0,1,1,0,0,0,0,1,0,0] is 4.
+'''
+import random
+
+rand_bi = list()
+for num in range(0, 25):
+    rand = random.randint(0,1)
+    rand_bi.append(rand)
+print(rand_bi)
+
+maximum = count = 0
+current = 0
+for c in rand_bi:
+    if c == current:
+        count += 1
+    else:
+        count = 0
+    maximum = max(count, maximum)
+
+print(maximum)
