@@ -1083,8 +1083,6 @@ print(add_list(l1, l2))
 longest run of zeros, the largest number of zeros in a row. For instance, the longest run
 of zeros in [1,0,1,1,0,0,0,0,1,0,0] is 4.
 '''
-import random
-
 rand_bi = list()
 for num in range(0, 25):
     rand = random.randint(0,1)
