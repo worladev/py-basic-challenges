@@ -1124,3 +1124,39 @@ questions. The game should give the player four randomly selected questions to a
 It should ask the questions one-by-one, and tell the player whether they got the question
 right or wrong. At the end it should print out how many out of four they got right.
 '''
+questions = [
+    "What is the capital of Ghana",
+    "Who is the current president of USA",
+    "How many countries are in Africa",
+    "Which country has the largest population",
+    "The second most populous country in the world is",
+    "How many states are in the United States of America",
+    "Python is a high level programming language True/False",
+    "WHO is an acronym for World High Organization",
+    "How many months are in a year",
+    "Ghana gained independence in which year"
+]
+
+answers = [
+    "Accra", "Joe", "54", "India", "China",
+    "52", "True", "False", "12", "1957"
+]
+
+count = 0
+correct = 0
+while count < 4:
+    questions_asked = list()
+    questions_asked = random.sample(questions, 4)
+    
+    for quest in questions_asked:
+        answer = input(f"\n{quest}?: ")
+        idx = questions.index(quest)
+        if answer.capitalize() == answers[idx]:
+            print("Correct")
+            correct += 1
+        else:
+            print("Wrong")
+        count += 1
+
+print(f"You had {correct} questions right.")
+
