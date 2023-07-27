@@ -1117,3 +1117,10 @@ def remove_duplicate(list_args):
 test_list = [1,1,2,3,4,3,0,0]
 print(remove_duplicate(test_list))
 
+
+'''NO 43
+- Write a simple quiz game that has a list of ten questions and a list of answers to those
+questions. The game should give the player four randomly selected questions to answer.
+It should ask the questions one-by-one, and tell the player whether they got the question
+right or wrong. At the end it should print out how many out of four they got right.
+'''
