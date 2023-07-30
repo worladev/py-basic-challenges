@@ -404,7 +404,6 @@ print(f"{count} test scored 'A'.\nAverage is: {average}")
 
 '''NO 21
 FUNCTIONS
-
 Write a function called change_case that given a string, returns a string with each
 upper case letter replaced by a lower case letter and vice-versa.
 '''
@@ -1160,3 +1159,60 @@ while count < 4:
 
 print(f"You had {correct} questions right.")
 
+
+'''NO 44 
+Write a function that converts a decimal number(base-10) to hexadecimal(base-16).
+'''
+# FIRST SOLUTION
+def convert_to_hex(number):
+
+    #2 if number is 0, return number.
+    if number == 0:
+        return number
+
+    #3 Rename variable to hold converted hexadecimal number
+    converted = []
+
+    while number > 0:
+        remainder = number % 16
+
+        if remainder < 10:
+            converted.insert(0, str(remainder))
+        elif remainder == 10:
+            converted.insert(0, 'A')
+        elif remainder == 11:
+            converted.insert(0, 'B')
+        elif remainder == 12:
+            converted.insert(0, 'C')
+        elif remainder == 13:
+            converted.insert(0, 'D')
+        elif remainder == 14:
+            converted.insert(0, 'E')
+        else:
+            converted.insert(0, 'F')
+
+        number //= 16
+
+    #4 making a negative decimal number positive before conversion
+    if number < 0:
+        number = number * -1
+        
+        #5 called the function to convert the negative number converted
+        # to a positive number and assign the result to a variable con.
+        recon = convert_to_hex(number)
+        
+        #6 insert the result at the 0 index of the converted list variable
+        converted.insert(0, recon)
+
+        #7 insert minus (-) sign at the 0 index of the converted list variable
+        converted.insert(0, '-')
+
+    hex_num = ''.join(converted)
+
+    return hex_num
+
+
+# Test examples
+print(convert_to_hex(16))    # Output: "10"
+print(convert_to_hex(-10))   # Output: "-A"
+print(convert_to_hex(255))   # Output: "FF"
