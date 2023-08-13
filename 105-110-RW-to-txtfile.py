@@ -14,3 +14,15 @@ the contents of the new text file on a Windows system is to read it using Notepa
 with open('txtFiles/Numbers.txt', mode='w') as challenge_file:
     file1 = challenge_file.write('4,6,8,10,12')
 
+
+'''No 106
+Create a new file called “Names.txt”. Add five names to the document, which are stored on separate lines.
+Once you have run the program, look in the location where your program is stored and check that the file
+has been created properly. 
+'''
+with open('txtFiles/Names.txt', mode='w') as challenge_file:
+    file2 = challenge_file.write('James\n')
+    file2 = challenge_file.write('Michael\n')
+    file2 = challenge_file.write('Jane\n')
+    file2 = challenge_file.write('Lisa\n')
+    file2 = challenge_file.write('Riley\n')
