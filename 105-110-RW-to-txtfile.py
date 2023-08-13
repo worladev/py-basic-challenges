@@ -26,3 +26,13 @@ with open('txtFiles/Names.txt', mode='w') as challenge_file:
     file2 = challenge_file.write('Jane\n')
     file2 = challenge_file.write('Lisa\n')
     file2 = challenge_file.write('Riley\n')
+
+
+'''No 107
+Open the Names.txt file and display the data in Python.
+'''
+with open('txtFiles/Names.txt', mode='r') as challenge_file:
+    file3 = challenge_file.read()
+    print(file3)
+
+
