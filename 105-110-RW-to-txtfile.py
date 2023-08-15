@@ -99,6 +99,21 @@ Using the Names.txt file you created earlier, display the list of names in Pytho
 to type in one of the names and then save all the names except the one they entered into a new
 file called Names2.txt. 
 '''
+# SOLUTION 1 --> Using with open method
+with open("txtFiles/Names.txt", mode='r') as challenge_file:
+    print(challenge_file.read())
+
+with open('txtFiles/Names.txt', mode='r') as challenge_file:
+  select = input('Enter a name from the list: ')
+  select = select + '\n'
+  for row in challenge_file:
+     if row != select:
+        with open('txtFiles/Names2.txt', mode='a') as challenge_file:
+           new_record = row
+           challenge_file.write(new_record)
+
+
+# SOLUTION 2
 file = open('txtFiles/Names.txt', mode='r')
 print(file.read())
 file.close()
