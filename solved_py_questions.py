@@ -1286,3 +1286,45 @@ print(find_eligible(ssn_list))
 # print(find_eligible(ssn_list2))
 # print(find_eligible(ssn_list3))
 
+
+
+'''No 46
+Title: Duplicate Letter Detector ==>Problem Statement:
+
+You are developing a spelling checker application that needs to identify the first letter in a
+given word that appears twice. Your task is to write a Python function that takes a string containing
+lowercase English letters and returns the first letter that appears twice in the word.
+
+Instructions:
+Implement a Python function find_first_duplicate(s) that takes the following argument:
+
+s: A string consisting of lowercase English letters.
+The function should return the first letter that appears twice in the string s. If no letter
+appears twice, return None.
+
+''' 
+
+def find_first_duplicate(string):
+   dupes = set()
+
+   for character in string:
+     if character in dupes:
+        return character
+     else:
+        dupes.add(character)
+
+   return None
+
+# Example:
+word1 = "mississippi"
+result1 = find_first_duplicate(word1)
+print(result1)  # Output: 'i'
+
+word2 = "ghana"
+result2 = find_first_duplicate(word2)
+print(result2)  # Output: 'a'
+
+word3 = "clean"
+result3 = find_first_duplicate(word3)
+print(result3)  # Output: 'None'
+
