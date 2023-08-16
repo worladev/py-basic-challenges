@@ -404,6 +404,7 @@ print(f"{count} test scored 'A'.\nAverage is: {average}")
 
 '''NO 21
 FUNCTIONS
+
 Write a function called change_case that given a string, returns a string with each
 upper case letter replaced by a lower case letter and vice-versa.
 '''
@@ -444,17 +445,23 @@ Write a function called one_away that takes two strings and returns True
 if the strings are of the same length and differ in exactly one letter,
 like bike/hike or water/wafer.
 '''
-def one_way(str1, str2):
+def one_away(str1, str2):
+
+    diff = 0
+    
     if len(str1) == len(str2):
         for i in range(len(str1)):
             if str1[i] != str2[i]:
-                return True
-            else:
-                return False
+                diff += 1
     else:
         return f"Words are not the same length."
+        
+    if diff > 1:
+        return False
+    else:
+        return True
     
-print(one_way("bike", "hike"))
+print(one_away("biku", "hike"))
 
 
 '''NO 24
@@ -894,6 +901,10 @@ A function that calculates the average score for a list of student scores.
 def calc_average(scores):
     total_score = 0
     number_of_scores = len(scores)
+
+    # check for an empty list
+    if number_of_scores == 0:
+        return 0
 
     for score in scores:
         total_score += score
