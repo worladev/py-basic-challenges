@@ -71,7 +71,7 @@ else:
 # 26 Pig Latin takes the first consonant of a word, moves
 # it to the end of the word and adds on an "ay". If a word
 # begins with a vowel you just add "way" to the end. For
-# example, pig bexomes igpay, banana becomes ananabay, and
+# example, pig becomes igpay, banana becomes ananabay, and
 # aadvark becomes aadvarkway. Create a program that will
 # ask the user to enter a word and change it into Pig Latin.
 # Make sure the new word is displayed in lower case.
@@ -87,3 +87,20 @@ if first != vowels:
 else:
     newword = word + "way"
 print(newword.lower())
+
+# or using a function ###########3
+def pig_latin(word):
+  if word is None:
+     return
+  #a list variable that holds all vowel letters
+  vowels = ["a", "e", "o", "i", "u"]
+
+  #get the first letter of the word
+  first_letter = word[0]
+
+  #handling if the first character is a vowel
+  if first_letter in vowels:
+      return word+"way"
+  else:
+      #handling if the first character is NOT a vowel(i.e is a consonant)
+     return word[1:len(word)] + first_letter + "ay"
