@@ -1402,3 +1402,11 @@ def find_array_quadruplet(arr, s):
                     return [arr[i], arr[j], arr[low], arr[high]]
 
     return []
+
+
+# Example Case 1
+# input:
+arr = [2, 7, 4, 0, 9, 5, 1, 3]
+s = 20
+print(find_array_quadruplet(arr, s))
+# output: [0, 4, 7, 9]
