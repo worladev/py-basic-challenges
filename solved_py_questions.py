@@ -1369,3 +1369,14 @@ you encounter (considering the results are sorted).
 Input:  arr = [2, 7, 4, 0, 9, 5, 1, 3], s = 20
 Expected Output: [0, 4, 7, 9] 
 '''
+# Solution inspired by promp.
+def find_array_quadruplet(arr, s):
+    n = len(arr)
+
+    # if there are fewer than 4 items in arr, by
+    # definition no quadruplet exists whose sum is s
+    if n < 4:
+        return []
+
+    # sort arr in an ascending order
+    arr.sort()
