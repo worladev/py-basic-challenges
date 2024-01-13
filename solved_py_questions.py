@@ -1380,3 +1380,25 @@ def find_array_quadruplet(arr, s):
 
     # sort arr in an ascending order
     arr.sort()
+    
+    for i in range(0, n - 4):
+        for j in range(i + 1, n - 3):
+            # r stores the complementing sum
+            r = s - (arr[i] + arr[j])
+
+            # check for sum r in subarray arr[j+1…n-1]
+            low = j + 1
+            high = n - 1
+
+            while low < high:
+                if (arr[low] + arr[high]) < r:
+                    low += 1
+
+                elif (arr[low] + arr[high]) > r:
+                    high -+ 1
+
+                # quadruplet with given sum found
+                else:
+                    return [arr[i], arr[j], arr[low], arr[high]]
+
+    return []
