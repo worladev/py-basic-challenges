@@ -1410,3 +1410,10 @@ arr = [2, 7, 4, 0, 9, 5, 1, 3]
 s = 20
 print(find_array_quadruplet(arr, s))
 # output: [0, 4, 7, 9]
+
+# Test case 2
+arr2 = [1, 3, 5, 7, 7 ,8, 2, 0]
+s2 = 23
+print(find_array_quadruplet(arr2, s2))
+# Output:  [3, 5, 7, 8]
+
