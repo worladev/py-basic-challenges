@@ -1489,6 +1489,45 @@ def getDifferentNumber(arr):
     return lengh_of_arr2
 
 
+# TEST CASE
+arr = [0, 1, 2, 3]
+print(getDifferentNumber(arr))
+# output: 4
+
+
+# SOLUTION 3 - The “in-place” solution
+    # If we are allowed to modify the input array arr, we can bring down the space complexity from O(N) to O(1),
+    # while keeping the time complexity at O(N).
+    # As before, this algorithm is going to be very similar to the brute force one. Since we are allowed to
+    # modify arr, the fact that its values are all unique nonnegative integers allows us to use a special kind
+    # of sorting algorithm whose time complexity is linear and not the standard O(N⋅log(N)) we typically associate
+    # with efficient sorting.
+
+    # The high-level idea is to push every number to its corresponding index in the array. The original number
+    # in the target index is “kicked out”, so we continue to find its target index using the same approach,
+    # until the target index is out of range.
+
+def getDifferentNumber(arr):
+    length_of_arr3 = len(arr)
+    temp = 0
+
+    # put each number in its corresponding index, kicking out
+    # the original number, until the target index is out of range.
+    for i in range(0, length_of_arr3 - 1):
+        temp = arr[i]
+        while temp < length_of_arr3 and arr[temp] != temp:
+            temp, arr[temp] = arr[temp], temp #using tuple unpacking
+
+    for i in range(0, length_of_arr3 - 1):
+        if arr[i] != i:
+            return i  # i isn’t in arr, hence we can return it
+
+    # we got here since every number from 0 to n-1 is in arr.
+    # By definition then, n isn’t in arr. Otherwise, the size of arr
+    # would have been n+1 and not n.
+    return length_of_arr3
+
+
 arr = [0, 1, 2, 3]
 print(getDifferentNumber(arr))
 # output: 4
