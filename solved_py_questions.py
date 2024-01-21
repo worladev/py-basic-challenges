@@ -1430,7 +1430,7 @@ would be undefined in our case.
 Your algorithm should be efficient, both from a time and a space complexity perspectives.
 Reference: pramp.com
 '''
-# Solution 1 - The Brute Force Solution
+# SOLUTION 1 - The Brute Force Solution
     # A simple solution would be to create a copy arr, sort that copy in an ascending order,
     # iterate over its values, and then return the first index for which the condition i != arrSorted[i] is met,
     # where arrSorted is the sorted copy of arr. This approach works since all the values in arr are
@@ -1452,6 +1452,41 @@ def getDifferentNumber(arr):
     # By definition then, length_of_array isn’t in arr. Otherwise, the size of arr
     # would have been length_of_array+1 and not length_of_array.
     return length_of_array
+
+
+# TEST CASE
+arr = [0, 1, 2, 3]
+print(getDifferentNumber(arr))
+# output: 4
+
+
+# SOLUTION 2 - The efficient solution
+    # The reason we needed to sort arrSorted in the brute force solution above was because doing so allowed
+    # us to cap the number of lookups to O(N). However, if all that we’re doing is simply checking whether
+    # certain values exist, then there is a better data structure for this purposes, which obviates the need
+    # for sorting. That data structure is the Set. A Set is similar to a Hash Table (a.k.a Map or Hash Map).
+    # Both support lookups and insertions in O(1) time. The difference is that while a hash table returns a
+    # value that is a mapped to a key, a set returns a boolean: true if a looked up element exists in the
+    # set and false otherwise.
+
+    # The new algorithm is practically identical to the brute force one, but instead of using a duplicate
+    # array and sorting it, we’ll use a set.
+
+def getDifferentNumber(arr):
+    lengh_of_arr2 = len(arr)
+
+    newset = set() # the Set interface is language dependent
+    for i in range(0, lengh_of_arr2 - 1):
+        newset.add(arr[i]) # build the set
+
+    for i in range(0, lengh_of_arr2 - 1):
+        if i not in newset:
+            return i
+
+    # we got here since every number from 0 to n-1 is in arr.
+    # By definition then, n isn’t in arr. Otherwise, the size of arr
+    # would have been n+1 and not n.
+    return lengh_of_arr2
 
 
 arr = [0, 1, 2, 3]
