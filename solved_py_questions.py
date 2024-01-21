@@ -1428,4 +1428,32 @@ the maximum value an integer can have is MAX_INT = 2^31-1. So, for instance, the
 would be undefined in our case.
 
 Your algorithm should be efficient, both from a time and a space complexity perspectives.
+Reference: pramp.com
 '''
+# Solution 1 - The Brute Force Solution
+    # A simple solution would be to create a copy arr, sort that copy in an ascending order,
+    # iterate over its values, and then return the first index for which the condition i != arrSorted[i] is met,
+    # where arrSorted is the sorted copy of arr. This approach works since all the values in arr are
+    # nonnegative integers.
+def getDifferentNumber(arr):
+    length_of_array = len(arr)
+
+    # since we’re not allowed to modify arr, we create a copy of it
+    arrSorted = arr
+
+    # sort the duplicate array in an ascending order
+    arrSorted.sort()
+
+    for i in range(0, length_of_array - 1):
+        if (arrSorted[i] != i):
+            return i  # i isn’t in arr, hence we can return it
+
+    # we got here since every number from 0 to length_of_array-1 is in arr.
+    # By definition then, length_of_array isn’t in arr. Otherwise, the size of arr
+    # would have been length_of_array+1 and not length_of_array.
+    return length_of_array
+
+
+arr = [0, 1, 2, 3]
+print(getDifferentNumber(arr))
+# output: 4
