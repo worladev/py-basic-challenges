@@ -1417,3 +1417,15 @@ s2 = 23
 print(find_array_quadruplet(arr2, s2))
 # Output:  [3, 5, 7, 8]
 
+
+'''NO 48
+Getting a Different Number
+
+Given an array arr of unique nonnegative integers, implement a function getDifferentNumber that finds
+the smallest nonnegative integer that is NOT in the array.
+Even if your programming language of choice doesn't have that restriction (like Python), assume that
+the maximum value an integer can have is MAX_INT = 2^31-1. So, for instance, the operation MAX_INT + 1
+would be undefined in our case.
+
+Your algorithm should be efficient, both from a time and a space complexity perspectives.
+'''
