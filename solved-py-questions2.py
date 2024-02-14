@@ -17,3 +17,10 @@ SAMPLE INPUT
 5
 2 3 6 6 5
 '''
+# SOLUTION
+
+# n = int(input())
+# arr = map(int, n.split())
+arr = [2, 3, 6, 6, 5]
+    
+arr_length = len(arr)
