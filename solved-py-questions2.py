@@ -24,3 +24,10 @@ SAMPLE INPUT
 arr = [2, 3, 6, 6, 5]
     
 arr_length = len(arr)
+first = arr[0]
+for i in range(1, arr_length):
+    if arr[i] >= first:
+        next = arr[i]
+        first = next
+    else:
+        print(arr[i])
